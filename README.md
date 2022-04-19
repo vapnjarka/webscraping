@@ -25,3 +25,10 @@ Read html code and save html nodes from the koronavirus.gov.hu. Select only rele
 used R packages: tidyverse, googleCloudVisionR, googleAuthR
 
 Tagging hundreds of photos by using googles' vision API and its label detection feature. Uploading the images one-by-one with the help of a loop and get all of the tags/descriptions of the image. (For safety, current row has been bound and saved in a csv, not to loose data if connection fails.) Filter for tags higher than a given score (to choose only relevant tags) and join my own dictionary which can help to correspond and aggregate tags. Compile a batch file for create tag named directories and copy the given image into directories with its tag names. Compile a batch file to save tag information into to the images' exif data.
+
+5, Get English & Hungarian names of Ukrainian settlements: ua_telep.py
+----------------------------------------------------------------------
+used python packages: urllib.parse, pandas
+
+Get English & Hungarian names of Ukrainian settlements using OpenStreetMap API, /search endpoint.  
+Send Cyrillic settlement names as URL requests to OSM (Nominatin) database, get JSON respons. Transfrom JSON to dataframe and filter results to administrative type and place class. Write result in the proper row. Save df to excel after every 100 rows not to lose information if connection fails.  
